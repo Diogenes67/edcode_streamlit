@@ -12,16 +12,17 @@ from numpy.linalg import norm
 import plotly.graph_objects as go
 from openai import OpenAI
 
-# Page configuration
-logo = Image.open("logo.png")
-st.image(logo, width=150)
-
+# Page configuration (must be the first Streamlit command)
 st.set_page_config(
-    page_title="EKoder-ED Code Classifier",
+    page_title="EKoder – ED Code Classifier",
     page_icon="🏥",
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+logo = Image.open("logo.png")
+st.image(logo, width=150)
+
 
 # Title and description
 st.markdown("<h1 style='color:#004080;font-size:48px;'>EKoder</h1>", unsafe_allow_html=True)
