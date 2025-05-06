@@ -252,7 +252,7 @@ def parse_response(resp, df):
         if m:
             code, expl = m.groups()
             if code in valid and code != 'R69':
-                rows.append((code, term[code], expl, get_funding_emoji(code, funding_lookup)))
+                rows.append((code, term[code], expl.strip('"').strip("'"), get_funding_emoji(code, funding_lookup)))
     return rows
 
 @st.cache_data
