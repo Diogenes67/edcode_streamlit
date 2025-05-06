@@ -1,0 +1,8 @@
+[theme]
+base = "light"
+primaryColor = "#2C3E50"  # Deep hospital blue
+backgroundColor = "#F9FAFB"
+secondaryBackgroundColor = "#E8EEF1"
+textColor = "#000000"
+font = "sans serif"
+

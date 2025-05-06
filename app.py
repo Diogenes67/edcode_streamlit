@@ -1,4 +1,6 @@
 import streamlit as st
+from PIL import Image
+
 from pathlib import Path
 import os
 import json
@@ -11,19 +13,24 @@ import plotly.graph_objects as go
 from openai import OpenAI
 
 # Page configuration
+logo = Image.open("logo.png")
+st.image(logo, width=150)
+
 st.set_page_config(
-    page_title="ED Code Classifier",
+    page_title="EKoder-ED Code Classifier",
     page_icon="🏥",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # Title and description
-st.title("Emergency Department Code Classifier")
+st.markdown("<h1 style='color:#004080;font-size:48px;'>EKoder</h1>", unsafe_allow_html=True)
 st.markdown("""
-This application helps classify emergency department notes using ICD-10-AM codes.
-Upload a text file containing a case note or enter the note directly in the text area.
-""")
+<div style='font-size:18px; color:#333;'>
+A clinical coding assistant designed for Australian Emergency Departments.<br>
+Upload a case note or paste it below to receive accurate ICD-10-AM code suggestions, powered by GPT‑4o.
+</div>
+""", unsafe_allow_html=True)
 
 # Initialize session state variables if they don't exist
 if 'results' not in st.session_state:
@@ -45,17 +52,15 @@ USE_LOCAL_EMBEDDINGS = st.sidebar.radio(
 st.session_state.embedding_mode = "Local" if USE_LOCAL_EMBEDDINGS else "OpenAI"
 
 # API Key input in sidebar
-OPENAI_API_KEY = st.sidebar.text_input("OpenAI API Key", 
-                                       value=os.environ.get("OPENAI_API_KEY", ""),
-                                       type="password",
-                                       help="Enter your OpenAI API key")
+OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY", "")
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 # If API key is provided, update environment variable
-if OPENAI_API_KEY:
-    os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
-    client = OpenAI(api_key=OPENAI_API_KEY)
-else:
-    st.sidebar.warning("Please enter an OpenAI API key to use this application")
+#if OPENAI_API_KEY:
+#    os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
+#    client = OpenAI(api_key=OPENAI_API_KEY)
+#else:
+#    st.sidebar.warning("Please enter an OpenAI API key to use this application")
 
 # File path configurations
 st.sidebar.header("File Configuration")
