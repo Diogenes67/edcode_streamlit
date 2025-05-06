@@ -33,13 +33,11 @@ st.markdown("<h1 style='color:#004080;font-size:48px;'>EKoder</h1>", unsafe_allo
 
 st.markdown("""
 <div style='font-size:18px; color:#333;'>
-<b>EKoder</b> is an AI-powered assistant for exploring clinical coding in Australian Emergency Departments.<br><br>
-
-This tool is for <b>educational and research use only</b>. It does not provide clinical advice or guaranteed coding accuracy.<br><br>
-
-Paste or upload an ED case note, and EKoder will suggest <b>up to four ICD-10-AM codes</b> that could plausibly represent the principal diagnosis, ranked by likelihood with reasoning included.<br><br>
-
-The <b>Complexity</b> column gives an indication of the expected resource use associated with each code in the Emergency Department setting.
+A clinical coding assistant designed for Australian Emergency Departments.<br><br>
+This tool is intended for educational and research use, exploring the use of AI in clinical coding.<br><br>
+It provides up to four ICD-10-AM codes that GPT‑4o suggests may fit the ED case note.<br>
+Each is ranked by likelihood, with rationale included.<br><br>
+The 'Complexity' column gives an indication of ED resource usage.
 </div>
 """, unsafe_allow_html=True)
 
