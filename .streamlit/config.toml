@@ -1,8 +1,7 @@
 [theme]
-base = "light"
-primaryColor = "#2C3E50"  # Deep hospital blue
-backgroundColor = "#F9FAFB"
-secondaryBackgroundColor = "#E8EEF1"
-textColor = "#000000"
+primaryColor = "#0C4B33"               # A deep green for buttons and highlights
+backgroundColor = "#eef5f2"            # Light hospital green from your screenshot
+secondaryBackgroundColor = "#ffffff"   # Clean white for cards/containers
+textColor = "#1B1C1E"                  # Almost black for easy reading
 font = "sans serif"
 
