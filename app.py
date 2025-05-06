@@ -28,15 +28,21 @@ local_css("ekoder_styles.css")
 logo = Image.open("logo.png")
 st.image(logo, width=150)
 
-
-# Title and description
+# Title and description  
 st.markdown("<h1 style='color:#004080;font-size:48px;'>EKoder</h1>", unsafe_allow_html=True)
+
 st.markdown("""
 <div style='font-size:18px; color:#333;'>
-A clinical coding assistant designed for Australian Emergency Departments.<br>
-Upload a case note or paste it below to receive accurate ICD-10-AM code suggestions, powered by GPT‑4o.
+<b>EKoder</b> is an AI-powered assistant for exploring clinical coding in Australian Emergency Departments.<br><br>
+
+This tool is for <b>educational and research use only</b>. It does not provide clinical advice or guaranteed coding accuracy.<br><br>
+
+Paste or upload an ED case note, and EKoder will suggest <b>up to four ICD-10-AM codes</b> that could plausibly represent the principal diagnosis, ranked by likelihood with reasoning included.<br><br>
+
+The <b>Complexity</b> column gives an indication of the expected resource use associated with each code in the Emergency Department setting.
 </div>
 """, unsafe_allow_html=True)
+
 
 # Initialize session state variables if they don't exist
 if 'results' not in st.session_state:
@@ -425,7 +431,7 @@ if st.session_state.results:
         # Create a Plotly table for better formatting
         fig = go.Figure(data=[go.Table(
             header=dict(
-                values=["Code", "Term", "Explanation", "Priority"],
+                values=["Code", "Term", "Explanation", "Complexity"],
                 fill_color='rgb(25, 25, 112)',
                 font=dict(color='white', size=14),
                 align='left'
