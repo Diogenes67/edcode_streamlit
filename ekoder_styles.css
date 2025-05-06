@@ -1,0 +1,13 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@500&display=swap');
+
+/* Apply Lato to body */
+html, body, [class*="css"] {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Apply Playfair Display to headers */
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+

@@ -1,7 +1,6 @@
 [theme]
-primaryColor = "#0C4B33"               # A deep green for buttons and highlights
-backgroundColor = "#eef5f2"            # Light hospital green from your screenshot
-secondaryBackgroundColor = "#ffffff"   # Clean white for cards/containers
-textColor = "#1B1C1E"                  # Almost black for easy reading
-font = "sans serif"
+primaryColor="#46a080"
+backgroundColor="#e4f3e8"
+secondaryBackgroundColor="#ffffff"
+textColor="#1b1c1e"
 
