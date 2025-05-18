@@ -39,11 +39,15 @@ This tool is intended for <b>research and educational purposes only</b>, to expl
 It uses GPT‑4o to analyse free-text ED case notes and suggest <b>up to four ICD-10-AM principal diagnosis codes</b> that could plausibly reflect the presentation.  
 These are ranked from most to least likely, with a short explanation provided for each.<br><br>
 
-The <b>Complexity</b> column indicates the relative resource intensity typically associated with each code in an ED setting, helping users understand how different codes may affect funding.<br><br>
+The <b>Complexity</b> column indicates the relative resource intensity typically associated with each code in an ED setting, based on historical funding weights.<br><br>
+
+<b>Note:</b> In practice, ED funding is affected by a range of additional factors — including patient complexity, procedures performed, comorbidities, triage category, and length of stay.  
+The ED code alone does not determine the total funding amount.<br><br>
 
 <b>How it works:</b><br>
 EKoder uses semantic similarity (via embedding-based search) to identify the most relevant codes from a shortlist of common ED diagnoses.  
-It then passes those to GPT‑4o for reasoning and code ranking based on your case note. No sidebar configuration is required — just paste or upload a case note.<br><br>
+It then passes those to GPT‑4o for reasoning and ranking based on your case note.  
+No sidebar configuration is required — just paste or upload a case note.<br><br>
 
 ⚠️ <b>Please ensure all case notes are de-identified before uploading or pasting into this tool.</b><br>
 Use of EKoder should be reviewed by your institution’s ICT, privacy, and research governance teams before integration into clinical or operational environments.<br><br>
