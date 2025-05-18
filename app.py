@@ -469,6 +469,20 @@ if st.session_state.results:
         )
 
         st.plotly_chart(fig, use_container_width=True)
+st.markdown("""
+### 🧾 Complexity Scale Legend
+
+The **Complexity** value reflects the typical resource use associated with each diagnosis code in the Emergency Department setting, based on historical funding data.
+
+| **Scale** | **Funding Range (AUD)** | **Description**           |
+|-----------|--------------------------|----------------------------|
+| 🟣 `1`     | ≤ $499                   | Minimal complexity         |
+| 🔵 `2`     | $500 – $699              | Low complexity             |
+| 🟢 `3`     | $700 – $899              | Moderate complexity        |
+| 🟡 `4`     | $900 – $1099             | High complexity            |
+| 🟠 `5`     | $1100 – $1449            | Significant complexity     |
+| 🔴 `6`     | ≥ $1450                  | Very high complexity       |
+""")
     else:
         st.warning("No valid codes extracted from the response.")
 
