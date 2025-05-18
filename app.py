@@ -469,6 +469,11 @@ if st.session_state.results:
         )
 
         st.plotly_chart(fig, use_container_width=True)
+
+    else:
+        st.warning("No valid codes extracted from the response.")
+
+# Add legend outside of if/else (no indentation!)
 st.markdown("""
 ### 🧾 Complexity Scale Legend
 
@@ -483,8 +488,6 @@ The **Complexity** value reflects the typical resource use associated with each 
 | 🟠 `5`     | $1100 – $1449            | Significant complexity     |
 | 🔴 `6`     | ≥ $1450                  | Very high complexity       |
 """)
-    else:
-        st.warning("No valid codes extracted from the response.")
 
 # Display instructions in the sidebar
 with st.sidebar.expander("Instructions", expanded=False):
