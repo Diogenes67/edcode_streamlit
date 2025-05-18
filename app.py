@@ -479,15 +479,24 @@ st.markdown("""
 
 The **Complexity** value reflects the typical resource use associated with each diagnosis code in the Emergency Department setting, based on historical funding data.
 
-| **Scale** | **Funding Range (AUD)** | **Description**           |
-|-----------|--------------------------|----------------------------|
-| 🟣 `1`     | ≤ $499                   | Minimal complexity         |
-| 🔵 `2`     | $500 – $699              | Low complexity             |
-| 🟢 `3`     | $700 – $899              | Moderate complexity        |
-| 🟡 `4`     | $900 – $1099             | High complexity            |
-| 🟠 `5`     | $1100 – $1449            | Significant complexity     |
-| 🔴 `6`     | ≥ $1450                  | Very high complexity       |
-""")
+<table style="width:100%; font-size:16px; border-collapse:collapse;">
+  <thead>
+    <tr>
+      <th align="left">Scale</th>
+      <th align="left">Funding Range (AUD)</th>
+      <th align="left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>🟣 1</td><td>≤ $499</td><td>Minimal complexity</td></tr>
+    <tr><td>🔵 2</td><td>$500 – $699</td><td>Low complexity</td></tr>
+    <tr><td>🟢 3</td><td>$700 – $899</td><td>Moderate complexity</td></tr>
+    <tr><td>🟡 4</td><td>$900 – $1099</td><td>High complexity</td></tr>
+    <tr><td>🟠 5</td><td>$1100 – $1449</td><td>Significant complexity</td></tr>
+    <tr><td>🔴 6</td><td>≥ $1450</td><td>Very high complexity</td></tr>
+  </tbody>
+</table>
+""", unsafe_allow_html=True)
 
 # Display instructions in the sidebar
 with st.sidebar.expander("Instructions", expanded=False):
