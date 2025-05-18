@@ -443,7 +443,9 @@ if st.session_state.results:
 
         # Create a Plotly table for better formatting
         fig = go.Figure(data=[go.Table(
-            header=dict(
+           columnwidth=[60, 180, 600, 80],
+
+	   header=dict(
                 values=["Code", "Term", "Explanation", "Complexity"],
                 fill_color='rgb(25, 25, 112)',
                 font=dict(color='white', size=14),
@@ -516,12 +518,12 @@ with st.sidebar.expander("Instructions", expanded=False):
     - Streamlit for the web interface
 
     ### Emoji legend
-    - 🟣 Scale 1
-    - 🔵 Scale 2
-    - 🟢 Scale 3
-    - 🟡 Scale 4
-    - 🟠 Scale 5
-    - 🔴 Scale 6
+    - 🟣  1
+    - 🔵  2
+    - 🟢  3
+    - 🟡  4
+    - 🟠  5
+    - 🔴  6
     """)
 
 # Display requirements in the sidebar
