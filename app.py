@@ -17,7 +17,7 @@ st.set_page_config(
     page_title="EKoder – ED Code Classifier",
     page_icon="🏥",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed"
 )
 def local_css(file_name):
     with open(file_name) as f:
