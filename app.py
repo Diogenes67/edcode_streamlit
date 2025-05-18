@@ -41,7 +41,7 @@ These are ranked from most to least likely, with a short explanation provided fo
 
 The <b>Complexity</b> column indicates the relative resource intensity typically associated with each code in an ED setting, based on historical funding weights.<br><br>
 
-<b>Note:</b> In practice, ED funding is affected by a range of additional factors — including patient complexity, procedures performed, comorbidities, triage category, and length of stay.  
+<b>Note:</b> In practice, ED funding is affected by a range of factors including patient complexity, triage category, and age.  
 The ED code alone does not determine the total funding amount.<br><br>
 
 <b>How it works:</b><br>
