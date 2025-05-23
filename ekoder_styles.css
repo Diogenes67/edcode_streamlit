@@ -11,3 +11,15 @@ h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
 }
 
+/* === App Background Color === */
+[data-testid="stAppViewContainer"] {
+    background-color: #EEF6F1 !important;
+}
+[data-testid="stAppViewContainer"] .block-container {
+    background-color: #EEF6F1 !important;
+}
+/* (Optional) Sidebar too */
+[data-testid="stSidebar"] {
+    background-color: #EEF6F1 !important;
+}
+
