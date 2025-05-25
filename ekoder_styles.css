@@ -1,0 +1,55 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@500&display=swap');
+
+/* Apply Lato to body */
+html, body, [class*="css"] {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Apply Playfair Display to headers */
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* === App Background Color === */
+[data-testid="stAppViewContainer"] {
+    background-color: #EEF6F1 !important;
+}
+[data-testid="stAppViewContainer"] .block-container {
+    background-color: #EEF6F1 !important;
+}
+/* (Optional) Sidebar too */
+[data-testid="stSidebar"] {
+    background-color: #EEF6F1 !important;
+}
+<<<<<<< HEAD
+/* === FORCE ALL TEXT TO DARK GREY === */
+html,
+body,
+.stApp,
+.stApp * {
+  color: #333333 !important;
+}
+
+/* Also headings (in case some are scoped differently) */
+h1, h2, h3, h4, h5, h6 {
+  color: #333333 !important;
+}
+
+/* Labels on inputs (text_area, file_uploader, etc.) */
+label, label span {
+  color: #333333 !important;
+}
+
+/* Table headers & cells */
+th, td {
+  color: #333333 !important;
+}
+
+/* Placeholder text */
+::placeholder {
+  color: #888888 !important;
+}
+=======
+>>>>>>> origin/main
+
